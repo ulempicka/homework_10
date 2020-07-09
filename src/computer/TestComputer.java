@@ -9,6 +9,6 @@ public class TestComputer {
         Computer computer1 = new Computer(processor, ram, disk);
 
         int increaseFreq = 5;
-        processor.increaseParameters(increaseFreq);
+        //processor.increaseParameters(increaseFreq);
     }
 }

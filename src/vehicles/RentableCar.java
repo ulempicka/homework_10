@@ -8,14 +8,15 @@ public class RentableCar extends Car implements Rentable{
     }
 
     @Override
-    public void rent(String firstName, String lastName, String id) {
-        person.setFirstName(firstName);
-        person.setLastName(lastName);
-        person.setId(id);
+    public Person rent(String firstName, String lastName, String id) {
+        System.out.println("Wypożyczam samochód");
+        person = new Person(firstName,lastName, id);
+        return person;
     }
 
     @Override
     public void handOver() {
+        System.out.println("Zwracam samochód");
         person = null;
     }
 

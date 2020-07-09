@@ -7,4 +7,11 @@ public class Car extends Vehicle{
         super(name, year, direction);
         this.seatNumber = seatNumber;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Car{" +
+                "seatNumber=" + seatNumber +
+                '}';
+    }
 }
