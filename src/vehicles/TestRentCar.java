@@ -15,7 +15,7 @@ public class TestRentCar {
         System.out.println("Najemca: " + person1.toString());
         rentableCar.handOver();
         System.out.println("Czy samochód jest teraz wypożyczony? " + rentableCar.isRent());
-        System.out.println("Najemca: " + person1.toString());
+        //System.out.println("Najemca: " + person1.toString());
 
     }
 }

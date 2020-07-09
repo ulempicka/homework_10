@@ -13,31 +13,22 @@ public class Processor extends Element implements Tuning {
         this.temp = temp;
     }
 
-    public int getTemp() {
-        return temp;
-    }
-
-    public void setTemp(int temp) {
-        this.temp = temp;
+    public void setFrequencyMHz(int frequencyMHz) {
+        this.frequencyMHz = frequencyMHz;
     }
 
     public int getFrequencyMHz() {
         return frequencyMHz;
     }
 
-    public void setFrequencyMHz(int frequencyMHz) {
-        this.frequencyMHz = frequencyMHz;
-    }
-
-    @Override
     public void increaseFreq(int increaseFreq) {
-        setFrequencyMHz(getFrequencyMHz() + increaseFreq);
+        frequencyMHz += increaseFreq;
     }
 
-    @Override
     public void increaseTemp(int increaseFreq) {
         int increaseTemp = increaseFreq * INCREASE_TEMP / INCREASE_FREQ;
-        setTemp(getTemp() + increaseTemp);
+        System.out.println("Wzrost temperatury procesora o: " + increaseTemp);
+        temp += increaseTemp;
     }
 
     @Override
@@ -48,5 +39,13 @@ public class Processor extends Element implements Tuning {
         } else {
             System.out.println("UWAGA! Temperatura maxymalna procesora!");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Processor{" +
+                "frequencyMHz=" + frequencyMHz +
+                ", temp=" + temp +
+                '}' + super.toString();
     }
 }

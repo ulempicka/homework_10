@@ -1,11 +1,11 @@
 package computer;
 
 public class Computer {
-    private Element processor;
-    private Element ram;
-    private Element disk;
+    private Processor processor;
+    private Ram ram;
+    private Disk disk;
 
-    public Computer(Element processor, Element ram, Element disk) {
+    public Computer(Processor processor, Ram ram, Disk disk) {
         this.processor = processor;
         this.ram = ram;
         this.disk = disk;

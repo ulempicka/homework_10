@@ -11,7 +11,12 @@ public abstract class Element {
         this.serialNumber = serialNumber;
     }
 
-//    abstract void increaseFreq(int increaseFreq);
-//    abstract void increaseTemp(int increaseFreq);
-//    abstract void increaseParameters(int increaseFreq);
+    @Override
+    public String toString() {
+        return "Element{" +
+                "model='" + model + '\'' +
+                ", producer='" + producer + '\'' +
+                ", serialNumber=" + serialNumber +
+                '}';
+    }
 }

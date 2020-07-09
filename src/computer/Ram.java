@@ -15,32 +15,14 @@ public class Ram extends Element implements Tuning {
         this.temp = temp;
     }
 
-    public int getFrequencyMHz() {
-        return frequencyMHz;
-    }
-
-    public void setFrequencyMHz(int frequencyMHz) {
-        this.frequencyMHz = frequencyMHz;
-    }
-
-    public int getTemp() {
-        return temp;
-    }
-
-    public void setTemp(int temp) {
-        this.temp = temp;
-    }
-
-    @Override
-    public void increaseFreq(int increase) {
+    void increaseFreq(int increase) {
         frequencyMHz += increase;
     }
 
-    @Override
     public void increaseTemp(int increaseFreq) {
         int increaseTemp = increaseFreq * INCREASE_TEMP / INCREASE_FREQ;
-        setTemp(getTemp() + increaseTemp);
-
+        System.out.println("Wzrost temperatury ramu o: " + increaseTemp);
+        temp += increaseTemp;
     }
 
     @Override
@@ -51,5 +33,14 @@ public class Ram extends Element implements Tuning {
         } else {
             System.out.println("UWAGA! Temperatura maxymalna RAMu!");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Ram{" +
+                "amountGB=" + amountGB +
+                ", frequencyMHz=" + frequencyMHz +
+                ", temp=" + temp +
+                '}' + super.toString();
     }
 }
